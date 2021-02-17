@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="bannniere">
+        <p>Je suis RachDev, un amoureux du code</p>
+        <script>
+            function chrono(date1, date2){
+                let hours = date1.getHours()-date2.getHours()
+                let minutes = date1.getMinutes()-date2.getMinutes()
+                let seconds = date1.getSeconds()-date2.getSeconds()
+                setInterval(function(){
+                    document.write('Il est : '+hours+ " : "+ minutes+ " : "+seconds)
+                }, 1000)
+
+            }
+            let heureFin = new Date(2020, 01, 06, 10, 00, 00);
+            let heureActu = new Date();
+            chrono(heureFin, heureActu)
+            
+        </script>
+
+    </div>
+   
+</body>
+</html>
