@@ -188,7 +188,7 @@
             </p>
           </div>
 
-          <div class="row">
+          <div class="row" id="parent">
             <div
               class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
               data-aos="zoom-in"
@@ -237,55 +237,8 @@
             </div>
           </div>
           <div class="row">
-            <div
-              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-code-slash"></i></div>
-                <h4 id="e-learning"><a href="">Création de sites web</a></h4>
-                <p>
-                  Nous avons une équipe de professionnels expérimentés qui travaillent 
-                  tous ensemble afin de développer votre site Web non seulement en améliorant son positionnement sur 
-                  les moteurs de recherche, mais en offrant véritablement la meilleure expérience possible aux utilisateurs et améliorant 
-                  la rétention de ces derniers.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-file-text"></i></div>
-                <h4 id="formations"><a href="">Rédaction web</a></h4>
-                <p> 
-                  Nous rédigerons pour vous des articles dans votre secteur d’activité afin de valoriser votre 
-                  image sur Internet en vous positionnant comme source de référence sur votre marché.
-                </p>
-              </div>
-            </div>
-            
-            <div
-              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-pencil-square"></i></div>
-                <h4 id="coaching"><a href="">Copywriting</a></h4>
-                <p>
-                  <strong>Ad Course Agency</strong> résout efficacement vos problèmes de copie et de contenu pour toujours, 
-                  en restant en avance sur les délais tout en ravissant les clients de tous les secteurs. Nous créons un contenu 
-                  clair, cohérent et captivant qui correspond à votre meilleur travail.
-                </p>
-              </div>
-            </div>
+            <button type="button" class="btn btn-primary text-center" id="bouton">Services secondaires</button>
           </div>
-        </div>
         </div>
         
       </section>
@@ -679,7 +632,66 @@
 
     <!-- Template Main JS File -->
     <script src="AdCourseAgency/assets/js/main.js"></script>
-  
+  <!-- Le script que j'ai moi meme intégré -->
+<script>
+    let parent = document.getElementById('parent'),
+          bouton = document.getElementById('bouton')
+
+      let content = document.createElement('div')
+      content.setAttribute('class', 'row')
+
+      bouton.addEventListener('click', ()=>{
+        content.innerHTML = `<div
+              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-code-slash"></i></div>
+                <h4 id="e-learning"><a href="">Création de sites web</a></h4>
+                <p>
+                  Nous avons une équipe de professionnels expérimentés qui travaillent 
+                  tous ensemble afin de développer votre site Web non seulement en améliorant son positionnement sur 
+                  les moteurs de recherche, mais en offrant véritablement la meilleure expérience possible aux utilisateurs et améliorant 
+                  la rétention de ces derniers.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-file-text"></i></div>
+                <h4 id="formations"><a href="">Rédaction web</a></h4>
+                <p> 
+                  Nous rédigerons pour vous des articles dans votre secteur d’activité afin de valoriser votre 
+                  image sur Internet en vous positionnant comme source de référence sur votre marché.
+                </p>
+              </div>
+            </div>
+            
+            <div
+              class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-pencil-square"></i></div>
+                <h4 id="coaching"><a href="">Copywriting</a></h4>
+                <p>
+                  <strong>Ad Course Agency</strong> résout efficacement vos problèmes de copie et de contenu pour toujours, 
+                  en restant en avance sur les délais tout en ravissant les clients de tous les secteurs. Nous créons un contenu 
+                  clair, cohérent et captivant qui correspond à votre meilleur travail.
+                </p>
+              </div>
+            </div>
+          </div>`
+        parent.replaceChild(content, bouton)
+    })
+</script>
 
 <!-- Facebook Pixel Code -->
 <script>
