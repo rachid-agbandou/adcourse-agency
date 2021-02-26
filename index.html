@@ -163,7 +163,7 @@
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services section-bg">
-        <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up"  id="parent">
           <div class="section-title">
             <h2>Nos Services</h2>
             <p
@@ -188,7 +188,7 @@
             </p>
           </div>
 
-          <div class="row" id="parent">
+          <div class="row">
             <div
               class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
               data-aos="zoom-in"
@@ -236,8 +236,9 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <button type="button" class="btn btn-primary text-center" id="bouton">Services secondaires</button>
+          <div class="row" id="bouton">
+            <div class="col mx-auto" style="width:90%">
+              <button type="button" class="btn btn-primary text-center">Services secondaires</button></div>
           </div>
         </div>
         
@@ -635,7 +636,7 @@
   <!-- Le script que j'ai moi meme intégré -->
 <script>
     let parent = document.getElementById('parent'),
-          bouton = document.getElementById('bouton')
+          bouton = document.getElementById('bouton');
 
       let content = document.createElement('div')
       content.setAttribute('class', 'row')
@@ -657,7 +658,6 @@
                 </p>
               </div>
             </div>
-
             <div
               class="col-xl-4 col-md-6 mt-4 d-flex align-items-stretch"
               data-aos="zoom-in"
@@ -687,8 +687,7 @@
                   clair, cohérent et captivant qui correspond à votre meilleur travail.
                 </p>
               </div>
-            </div>
-          </div>`
+            </div>`
         parent.replaceChild(content, bouton)
     })
 </script>
